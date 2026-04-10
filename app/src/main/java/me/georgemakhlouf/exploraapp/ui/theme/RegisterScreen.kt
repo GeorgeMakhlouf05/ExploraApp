@@ -62,7 +62,7 @@ fun RegisterScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             IconButton(
-                onClick = onBackClick,
+                onClick = onNavigateToLogin,
                 modifier = Modifier
                     .align(Alignment.Start)
                     .offset(x = (-12).dp)
