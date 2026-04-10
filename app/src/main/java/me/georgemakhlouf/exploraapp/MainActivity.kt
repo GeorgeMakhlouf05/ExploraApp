@@ -11,15 +11,32 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import me.georgemakhlouf.exploraapp.ui.theme.ExploraAppTheme
 import me.georgemakhlouf.exploraapp.ui.theme.LoginScreen
+import me.georgemakhlouf.exploraapp.ui.theme.RegisterScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {})
+            val myNavController = rememberNavController()
+            NavHost(
+                navController = myNavController,
+                startDestination = "login",
+                modifier = Modifier.fillMaxSize()
+            ) {
+                composable(route = "login") {
+                    LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {})
+                }
+                composable(route = "Register") {
+                    RegisterScreen(onRegisterSuccess = {}, onNavigateToLogin = {})
+
+                }
+            }
         }
     }
 }
