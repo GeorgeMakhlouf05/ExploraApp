@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "773985298518",
+    "project_id": "exploraapp-3a676",
+    "storage_bucket": "exploraapp-3a676.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773985298518:android:82e6b545349dfc63d073f7",
+        "android_client_info": {
+          "package_name": "me.georgemakhlouf.exploraapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Fd77P18iqAms-5_R51TJAeVPwVEKzGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
