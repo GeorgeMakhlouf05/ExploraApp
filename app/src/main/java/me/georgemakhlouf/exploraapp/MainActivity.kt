@@ -65,6 +65,7 @@ class MainActivity : ComponentActivity() {
                                 myNavController.navigate("login") {
                                     popUpTo("home") { inclusive = true }
                                 }
+
                             }
                         )
                     }
