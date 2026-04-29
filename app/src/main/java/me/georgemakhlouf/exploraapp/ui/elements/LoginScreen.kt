@@ -1,4 +1,4 @@
-package me.georgemakhlouf.exploraapp.ui.theme
+package me.georgemakhlouf.exploraapp.ui.elements
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -453,7 +453,7 @@ fun SocialButton(
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview() {
-    ExploraAppTheme {
+    _root_ide_package_.me.georgemakhlouf.exploraapp.ui.theme.ExploraAppTheme {
         LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {})
     }
 }

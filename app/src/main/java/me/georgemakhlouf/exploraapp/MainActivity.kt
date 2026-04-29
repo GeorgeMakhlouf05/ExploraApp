@@ -10,10 +10,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.auth.FirebaseAuth
+import me.georgemakhlouf.exploraapp.ui.elements.AddTouristicPlaceScreen
 import me.georgemakhlouf.exploraapp.ui.theme.ExploraAppTheme
-import me.georgemakhlouf.exploraapp.ui.theme.HomeScreen
-import me.georgemakhlouf.exploraapp.ui.theme.LoginScreen
-import me.georgemakhlouf.exploraapp.ui.theme.RegisterScreen
+import me.georgemakhlouf.exploraapp.ui.elements.HomeScreen
+import me.georgemakhlouf.exploraapp.ui.elements.LoginScreen
+import me.georgemakhlouf.exploraapp.ui.elements.RegisterScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +69,10 @@ class MainActivity : ComponentActivity() {
 
                             }
                         )
+                    }
+
+                    composable(route = "add_Touristic_Place") {
+                        AddTouristicPlaceScreen()
                     }
                 }
             }
