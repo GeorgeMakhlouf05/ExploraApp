@@ -61,18 +61,24 @@ class MainActivity : ComponentActivity() {
 
                     composable(route = "home") {
                         HomeScreen(
+                            onClickAddTouristicPlace = {
+                                myNavController.navigate("add_Touristic_Place")
+                            },
                             onLogout = {
                                 auth.signOut()
                                 myNavController.navigate("login") {
                                     popUpTo("home") { inclusive = true }
                                 }
-
                             }
                         )
                     }
 
                     composable(route = "add_Touristic_Place") {
-                        AddTouristicPlaceScreen()
+                        AddTouristicPlaceScreen(
+                            onBackClick = {
+                                myNavController.popBackStack()
+                            }
+                        )
                     }
                 }
             }
